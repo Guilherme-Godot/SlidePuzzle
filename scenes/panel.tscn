@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://oxf366msocex"]
+
+[ext_resource type="Script" path="res://scenes/panel.gd" id="1_chs6s"]
+
+[node name="Panel" type="Panel"]
+offset_right = 150.0
+offset_bottom = 150.0
+script = ExtResource("1_chs6s")
