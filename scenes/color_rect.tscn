@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsfydc4585rxu"]
+[gd_scene load_steps=3 format=3 uid="uid://dsfydc4585rxu"]
 
 [ext_resource type="Script" path="res://ColorRect.gd" id="1_6vrm8"]
+
+[sub_resource type="Theme" id="Theme_db403"]
 
 [node name="ColorRect" type="ColorRect"]
 offset_right = 40.0
 offset_bottom = 40.0
-color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+theme = SubResource("Theme_db403")
+color = Color(0.34902, 0.184314, 0.466667, 1)
 script = ExtResource("1_6vrm8")
 
 [node name="Label" type="Label" parent="."]
