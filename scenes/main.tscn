@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://yfkjqp81xoou"]
+[gd_scene load_steps=6 format=3 uid="uid://yfkjqp81xoou"]
 
 [ext_resource type="PackedScene" uid="uid://oxf366msocex" path="res://scenes/panel.tscn" id="1_giwg8"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_r2cq6"]
+[ext_resource type="Script" path="res://scenes/Lines.gd" id="3_2wmee"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2fb4"]
 bg_color = Color(0.137255, 0.0196078, 0.141176, 1)
@@ -10,6 +11,9 @@ border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0.0862745, 0.0588235, 0.431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1b5x"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="main" type="Node"]
 script = ExtResource("1_r2cq6")
@@ -21,3 +25,8 @@ offset_top = 0.0
 offset_right = 150.0
 offset_bottom = 150.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_o2fb4")
+
+[node name="Lines" type="Panel" parent="."]
+unique_name_in_owner = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_s1b5x")
+script = ExtResource("3_2wmee")

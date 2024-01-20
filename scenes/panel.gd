@@ -6,11 +6,11 @@ extends Panel
 @export var border_size:int = 10
 var square = preload("res://scenes/color_rect.tscn")
 
-func set_attributes(sizes:int, n:int, border_size:int):
+func set_attributes(sizes:int, n:int, border_size_arg:int):
 	n_x = n
 	n_y = n
 	size_arg = sizes
-	border_size = border_size
+	border_size = border_size_arg
 
 func start():
 	size.x = size_arg * n_x + border_size * 2
@@ -29,10 +29,8 @@ func start():
 			squares.append(new_square)
 	print(number_of_squares)
 	
-func _draw():
-	draw_line(Vector2i(size_arg, size_arg), Vector2i(size_arg, n_y * size_arg), Color.WHITE_SMOKE, 2)
-	draw_line(Vector2i(50, 50), Vector2i(50, 200), Color.WHITE_SMOKE, 5)
+
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().quit()
